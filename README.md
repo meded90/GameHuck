@@ -1,6 +1,8 @@
-# mobx-next-example
-A set of examples to get started with Mobx and Next.JS
+# GameHuck
+игра для хакатано 
 
-##Demo
-
-A demo can be found here : [https://mobx-next.now.sh/](https://mobx-next.now.sh/)
+## how start
+```jsx harmony
+npm i 
+npm run dev
+```
