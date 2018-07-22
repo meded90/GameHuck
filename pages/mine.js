@@ -197,8 +197,8 @@ class Mine extends React.Component {
       </Box>
       { mineIsAlly && mineIsClose ?
         <Link
-          href={ '/mineAdd' }><Row>{ this.renderUnits(mine.army) }</Row></Link> :
-        <Row>{ this.renderUnits(mine.army) }</Row> }
+          href={ '/mineAdd' }><Row style={{flexWrap: 'wrap'}}>{ this.renderUnits(mine.army) }</Row></Link> :
+        <Row style={{flexWrap: 'wrap'}}>{ this.renderUnits(mine.army) }</Row> }
 
       <br />
       <br />

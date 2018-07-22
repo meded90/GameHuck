@@ -57,7 +57,7 @@ class profile extends React.Component {
             <br />
             <Row>
               <Dis>
-                <Number>{ this.props.global.heroes.balance }</Number>
+                <Number>{ this.props.global.heroes.balance || 0 }</Number>
                 <div>
                   Coins
                 </div>
@@ -78,7 +78,7 @@ class profile extends React.Component {
           </div>
         </div>
         <br />
-        <Link href={ '/shop' }><Row>{ this.renderUnits() }</Row></Link>
+        <Link href={ '/shop' }><Row style={ { flexWrap: 'wrap' } }>{ this.renderUnits() }</Row></Link>
       </Box>
     </Content>
   }

@@ -63,7 +63,7 @@ const Index = () => <Content>
         Human
       </h2>
       <h2>
-        Zombi
+        Creatures
       </h2>
     </Row>
     <ProgressWrap>

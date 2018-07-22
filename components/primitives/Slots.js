@@ -6,7 +6,6 @@ const Wrap = styled.div`
   height: 100px;
   position: relative;
   margin-bottom: 30px;
-  background-color: rgba(255,255,255,0.31);
   border-radius: 50%;
   text-align: center;
   img {

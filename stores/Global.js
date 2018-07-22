@@ -29,7 +29,7 @@ export default class Global {
   @observable  position;
   @observable  unitsAll = [];
 
-  currentHeroes = '4719e99b-3185-4eb7-9db4-83494c1445a3';
+  currentHeroes = Boolean(Math.round(Math.random())) ? '4719e99b-3185-4eb7-9db4-83494c1445a3' : "1fa66419-0706-4da2-9016-ab5d20049dbd";
 
   constructor(mines = null) {
 
@@ -82,10 +82,12 @@ export default class Global {
   }
   fetchColect = async () => {
     try {
-      const { data } = await Axios.post(`${API_BASE}mines/attack`, {
-        heroId: this.currentHeroes,
-        mineId: this.currentMine
+      await Axios.post(`${API_BASE}mines/collect`, {
+        heroId: this.heroes.id,
+        mineId: this.mine.id
       });
+      await this.fetchHeroes();
+      await this.fetchMine();
     } catch (e) {
       console.error(e.message);
     }
@@ -134,6 +136,7 @@ export default class Global {
       console.error(e.message);
     }
   }
+
 
   fetchAddInToMien = async (reqest) => {
     if (!this.currentMine) {

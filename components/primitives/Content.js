@@ -11,4 +11,5 @@ export default styled.div`
   right: 0;
   background-color:#141F32; 
   bottom: 50px;
+  overflow: auto;
 `;
